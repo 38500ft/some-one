@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesan Spesial untukmu</title>
+    <style>
+        body {
+            background-color: #f8f0f0; /* Light pink background */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 60px; /* Increase padding from the top */
+            margin: 0; /* Remove default body margin */
+        }
+        h1 {
+            color: #e94e77; /* Rosy pink color */
+            font-size: 2.8em; /* Slightly increase font size */
+            margin-bottom: 25px; /* Increase bottom margin */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+        }
+        p {
+            color: #333; /* Dark grey color */
+            font-size: 1.3em; /* Slightly increase font size */
+            margin-bottom: 20px; /* Increase bottom margin */
+            line-height: 1.6; /* Improve readability */
+            padding: 0 20px; /* Add horizontal padding */
+        }
+        .heart-container {
+            position: relative;
+            width: 120px; /* Adjust size as needed */
+            height: 110px; /* Adjust size as needed */
+            margin: 60px auto; /* Center the heart and add more space */
+            /* Apply the animation */
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        .heart-container::before,
+        .heart-container::after {
+            content: '';
+            position: absolute;
+            width: 70px; /* Adjust size as needed */
+            height: 110px; /* Adjust size as needed */
+            background-color: #e94e77; /* Heart color */
+            border-radius: 50%;
+        }
+        .heart-container::before {
+            top: 0;
+            left: 35px; /* Adjust position as needed */
+            transform: rotate(-45deg);
+        }
+        .heart-container::after {
+            top: 0;
+            left: 0; /* Adjust position as needed */
+            transform: rotate(45deg);
+        }
+
+        /* Define the pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15); /* Slightly increase pulse intensity */
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Halo Sayang,</h1>
+    <p>Ini adalah pesan spesial dariku untukmu.</p>
+    <p>Semoga harimu menyenangkan!</p>
+
+    <div class="heart-container"></div>
+
+</body>
+</html>
